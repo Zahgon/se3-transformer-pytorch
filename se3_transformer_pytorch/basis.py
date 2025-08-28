@@ -168,7 +168,7 @@ def get_basis(r_ij, max_degree, differentiable = False):
     """
 
     # Relative positional encodings (vector)
-    context = null_context if not differentiable else torch.no_grad
+    context = null_context if differentiable else torch.no_grad
 
     device, dtype = r_ij.device, r_ij.dtype
 
